@@ -98,3 +98,19 @@ if (contactForm && reservationMessage) {
     });
 
 }
+const reservationForm = document.getElementById("reservationForm");
+const toast = document.getElementById("toast");
+
+reservationForm.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    toast.classList.add("show");
+
+    reservationForm.reset();
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 4000);
+
+});
